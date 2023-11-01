@@ -88,6 +88,10 @@ contract ExampleERC6551Account is IERC165, IERC1271, IERC6551Account, IERC6551Ex
         return IERC721(tokenContract).ownerOf(tokenId);
     }
 
+    function getChainId() public view returns (uint256) {
+        return block.chainid;
+    }
+
     function _isValidSigner(address signer) internal view returns (bool) {
         return signer == owner();
     } 
