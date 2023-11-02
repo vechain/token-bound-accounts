@@ -81,7 +81,7 @@ describe("ExampleERC6551Account", () => {
         
         // Sending 1 ether from sender to accountOwner
         const fundAccount1Tx = await senderSigner.sendTransaction({
-            to: accountOwnerSigner.getAddress(),
+            to: ExampleERC6551TestAccountInstance.getAddress(),
             value: parseEther("1.0")
         });
         await fundAccount1Tx.wait();
