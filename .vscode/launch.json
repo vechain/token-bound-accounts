@@ -21,7 +21,7 @@
             "request": "launch",
             "name": "Hardhat tests",
             "program": "${workspaceFolder}/node_modules/.bin/hardhat",
-            "args": ["test", "--network", "vechain", "--bail", "--grep", "verify"],
+            "args": ["test"],
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen",
             "preLaunchTask": "tsc: build - tsconfig.json",
