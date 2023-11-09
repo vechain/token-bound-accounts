@@ -23,10 +23,11 @@ describe("ERC6551Registry", () => {
         
         ERC721MockInstance = await deployERC721() as ERC721Mock;
         await mintNFT(ERC721MockInstance, await accounts[0].getAddress(), tokenId);
+
         
         createAccountTx = await ERC6551RegistryInstance.createAccount(
             await ExampleERC6551AccountInstance.getAddress(),
-            await getChainId(true),
+            await getChainId(),
             await ERC721MockInstance.getAddress(),
             tokenId,
             salt,
@@ -47,7 +48,7 @@ describe("ERC6551Registry", () => {
 
         const computedAccountAddress = await ERC6551RegistryInstance.account(
             await ExampleERC6551AccountInstance.getAddress(),
-            await getChainId(true),
+            await getChainId(),
             await ERC721MockInstance.getAddress(),
             tokenId,
             salt

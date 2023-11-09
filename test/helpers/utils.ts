@@ -2,10 +2,7 @@ import { ethers } from "hardhat"
 import { ERC721Mock } from "../../typechain-types/";
 import { BigNumberish, HDNodeWallet } from "ethers";
 
-export async function getChainId(isVechain: Boolean): Promise<bigint> {
-    if (isVechain) {
-        return 20257036855429895315704288894496386224204271168750785572924599986678n;
-    }
+export async function getChainId(): Promise<bigint> {
     return (await ethers.provider.getNetwork()).chainId
 }
 

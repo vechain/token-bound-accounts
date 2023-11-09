@@ -30,7 +30,7 @@ describe("ExampleERC6551Account", () => {
     
         createAccountTx = await ERC6551RegistryInstance.createAccount(
             await ExampleERC6551AccountInstance.getAddress(),
-            await getChainId(true),
+            await getChainId(),
             await ERC721MockInstance.getAddress(),
             tokenId,
             salt,
@@ -110,7 +110,7 @@ describe("ExampleERC6551Account", () => {
 
         const tx: TransactionResponse = await ERC6551RegistryInstance.createAccount(
             await ExampleERC6551AccountInstance.getAddress(),
-            await getChainId(true),
+            await getChainId(),
             await ERC721MockInstance.getAddress(),
             tokenId,
             salt,
